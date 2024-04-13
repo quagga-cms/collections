@@ -1,19 +1,44 @@
 {
     "name": "quagga/collections",
     "description": "The Illuminate Collections package.",
-    "type": "library",
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Quagga\\Collections\\": "src/"
-        }
+    "homepage": "https://laravel.com",
+    "support": {
+        "issues": "https://github.com/laravel/framework/issues",
+        "source": "https://github.com/laravel/framework"
     },
     "authors": [
+        {
+            "name": "Taylor Otwell",
+            "email": "taylor@laravel.com"
+        },
         {
             "name": "Puleeno",
             "email": "puleeno@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "quagga/contracts": "*",
+        "quagga/macroable": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Illuminate\\Support\\": "src/"
+        },
+        "files": [
+            "helpers.php"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "8.x-dev"
+        }
+    },
+    "suggest": {
+        "symfony/var-dumper": "Required to use the dump method (^5.4)."
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
 }
